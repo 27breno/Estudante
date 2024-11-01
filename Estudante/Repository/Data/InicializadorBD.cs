@@ -10,7 +10,7 @@ namespace Estudante.Repository.Data
 {
     public static class InicializadorBD
     {
-        private const string ConnectionString = "Data Source=Estudate.db";
+        private const string ConnectionString = "Data Source=Estudante.db";
 
 
         public static void Inicializar()
