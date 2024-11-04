@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Estudante.Repository.Data
+namespace Estudantes.Repository.Data
 {
     public static class InicializadorBD
     {

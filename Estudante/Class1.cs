@@ -1,4 +1,4 @@
-﻿namespace Estudante
+﻿namespace Estudantes
 {
     public class Class1
     {

@@ -5,7 +5,7 @@ using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Estudante.Entidade
+namespace Estudantes.Entidade
 {
     public class Estudante
     {
