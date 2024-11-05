@@ -1,4 +1,8 @@
+using Estudantes.Repository;
 using Estudantes.Repository.Data;
+using Estudantes.Repository.interfaces;
+using Estudantes.Service;
+using Estudantes.Service.interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +13,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 InicializadorBD.Inicializar();
+
+builder.Services.AddScoped<IEstudanteRepository, EstudanteRepository>();
+builder.Services.AddScoped<IEstudanteService, EstudanteService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

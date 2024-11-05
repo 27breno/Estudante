@@ -1,11 +1,12 @@
 ﻿using Dapper.Contrib.Extensions;
 using Estudantes.Entidade;
+using Estudantes.Repository.interfaces;
 using Microsoft.Extensions.Configuration;
 using System.Data.SQLite;
 
 namespace Estudantes.Repository
 {
-    public class EstudanteRepository
+    public class EstudanteRepository : IEstudanteRepository
     {
         private readonly string ConnectionString;
         public EstudanteRepository( IConfiguration config)

@@ -1,5 +1,6 @@
 ﻿using Estudantes.Entidade;
 using Estudantes.Service;
+using Estudantes.Service.interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication1.Controllers
@@ -8,13 +9,13 @@ namespace WebApplication1.Controllers
     [Route("[controller]")]
     public class EstudanteController : ControllerBase
     {
-        private readonly EstudanteService _service;
+        private readonly IEstudanteService _service;
 
-        public EstudanteController(IConfiguration config)
+        public EstudanteController(IConfiguration config, IEstudanteService service)
         {
             string connect = config.GetConnectionString("DefaultConnection");
 
-            _service = new EstudanteService(config);
+            _service = service;
 
         }
 

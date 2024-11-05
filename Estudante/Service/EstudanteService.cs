@@ -1,5 +1,6 @@
 ﻿using Estudantes.Entidade;
 using Estudantes.Repository;
+using Estudantes.Service.interfaces;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Estudantes.Service
 {
-    public class EstudanteService
+    public class EstudanteService : IEstudanteService
     {
        EstudanteRepository repositorio { get; set; }
 
