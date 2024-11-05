@@ -29,6 +29,22 @@ namespace Estudantes.Repository
                 }
             }
         }
+        public void Remover(int id)
+        {
+            using var connection = new SQLiteConnection(ConnectionString);
+            Estudante estudante = BuscarPorId(id);
+            connection.Delete<Estudante>(estudante);
+        }
+        public void Editar(Estudante endereco)
+        {
+            using var connection = new SQLiteConnection(ConnectionString);
+            connection.Update<Estudante>(endereco);
+        }
+        public Estudante BuscarPorId(int id)
+        {
+            using var connection = new SQLiteConnection(ConnectionString);
+            return connection.Get<Estudante>(id);
+        }
 
     }
 }

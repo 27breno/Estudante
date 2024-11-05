@@ -27,5 +27,17 @@ namespace Estudantes.Service
         {
             return repositorio.listar();
         }
+        public void Remover(int id)
+        {
+            repositorio.Remover(id);
+        }
+        public Estudante BuscarPorId(int id)
+        {
+            return repositorio.BuscarPorId(id);
+        }
+        public void Editar(Estudante editPessoa)
+        {
+            repositorio.Editar(editPessoa);
+        }
     }
 }

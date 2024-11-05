@@ -11,5 +11,8 @@ namespace Estudantes.Service.interfaces
     {
         void Adicionar(Estudante a);
         List<Estudante> Listar();
+        void Remover(int id);
+        Estudante BuscarPorId(int id);
+        void Editar(Estudante editPessoa);
     }
 }

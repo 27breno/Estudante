@@ -31,5 +31,15 @@ namespace WebApplication1.Controllers
         {
             return _service.Listar();
         }
+        [HttpPut("editar-Avaliação")]
+        public void Editar(Estudante p)
+        {
+            _service.Editar(p);
+        }
+        [HttpDelete("deletar-Avaliação")]
+        public void Deletar(int id)
+        {
+            _service.Remover(id);
+        }
     }
 }

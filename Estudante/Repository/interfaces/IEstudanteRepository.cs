@@ -12,5 +12,9 @@ namespace Estudantes.Repository.interfaces
         void Adicionar(Estudante u);
 
         List<Estudante> listar();
+
+        void Editar(Estudante endereco);
+        Estudante BuscarPorId(int id);
+        void Remover(int id);
     }
 }
